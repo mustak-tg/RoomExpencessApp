@@ -21,3 +21,7 @@
 .mat-step-header .mat-step-icon {
   background-color: limegreen;
 }
+.back{
+  background-color: orangered;
+  color: white;
+}

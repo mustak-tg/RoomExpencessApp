@@ -34,7 +34,9 @@ export class CreateRoomieComponent implements OnInit {
       'mobile_no':['']
     });
     this.secondFormGroup = this.fb.group({
-      secondCtrl: ['', Validators.required]
+      'name': [''],
+      'email': [''],
+      'mobile_no':['']
     });
   }
 
