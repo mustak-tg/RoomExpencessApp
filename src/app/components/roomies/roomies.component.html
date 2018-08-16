@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="row">
+
+    <div class="col-sm-8 col-sm-offset-2">
+      
+       <mat-card >
+  
+          <mat-card-title class=" card-title text-center">
+           Roomies
+         
+          </mat-card-title>
+        <hr/>
+          <mat-card-content >
+            <ag-grid-angular 
+            style="width: 900px; height: 500px;" 
+            class="ag-theme-material"
+            [rowData]="rowData" 
+            [columnDefs]="columnDefs"
+            [enableSorting]="true"
+            [enableFilter]="true"
+            [animateRows]="true"
+            [rowSelection]="rowSelection"
+            >
+        </ag-grid-angular>
+          </mat-card-content>
+       </mat-card>
+    </div>
+    
+  </div>
+  
+  
+  

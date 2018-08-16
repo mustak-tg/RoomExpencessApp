@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~ag-grid/dist/styles/ag-grid.css";
+@import "~ag-grid/dist/styles/ag-theme-material.css";
+
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: limegreen  ;
+  }
+ 
+
+  .backImg{
+    background-color:whitesmoke
+  }
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 33px;
+}
+.mat-step-header .mat-step-icon {
+  background-color: limegreen;
+}

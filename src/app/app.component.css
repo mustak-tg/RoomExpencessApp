@@ -1,0 +1,23 @@
+.header{
+    background-color:orangered;
+    height: 50px;
+    text-align: center;
+    text-decoration: aquamarine;
+    padding-top: 12px;
+    color:white;
+    box-shadow: 10px;
+    opacity: 0.3px;
+}
+
+
+.backImg{
+    background-color: antiquewhite
+}
+.outlet{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+.mat-card{
+    margin-top: 73px;
+}
