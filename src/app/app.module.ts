@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {FormsModule } from '@angular/forms'
 import { HttpModule  }  from '@angular/http'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule,MatCheckbox} from '@angular/material/checkbox';
@@ -17,7 +16,7 @@ import { AppRoutingModule,routingComponets } from '../app/app-routing/app-routin
 import {MatIconModule} from '@angular/material/icon';
 import { RoomiesComponent } from './components/roomies/roomies.component';
 import { AgGridModule } from 'ag-grid-angular';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpServicesService } from './http-services.service'
 @NgModule({
   declarations: [

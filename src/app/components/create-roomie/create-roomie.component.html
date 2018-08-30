@@ -40,41 +40,54 @@
         </form>
       </mat-step>
       <mat-step [stepControl]="secondFormGroup">
-        <form [formGroup]="secondFormGroup">
+        <form [formGroup]="secondFormGroup" (submit)="submitRoomie()">
           <ng-template matStepLabel>Roomies Details</ng-template>
-          <div class="form-group example-container">
-            <mat-form-field>
-              <input matInput placeholder="Enter Name" formControlName='name'>
-            </mat-form-field>
-          </div>
-          <div class="form-group example-container">
-            <mat-form-field>
-              <input matInput placeholder="Enter Email Address" formControlName='email'>
-            </mat-form-field>
-          </div>
-          <div class="form-group example-container">
-            <mat-form-field>
-              <input matInput placeholder="Enter Mobile No." formControlName='mobile_no'>
-            </mat-form-field>
+
+          <div formArrayName="items" *ngFor="let item of secondFormGroup.get('items').controls; let i = index;">
+            <h4>Roomie:{{i+1}}</h4>
+            <div [formGroupName]="i">
+              <div class="form-group example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Enter Name" formControlName='name'>
+                </mat-form-field>
+              </div>
+              <div class="form-group example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Enter Email Address" formControlName='email'>
+                </mat-form-field>
+              </div>
+              <div class="form-group example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Enter Mobile No." formControlName='mobile_no'>
+                </mat-form-field>
+              </div>
+              <div class="text-right">
+                <a *ngIf="i>0?true:false" (click)="deleteRoomieForm(i)"><i class="far fa-trash-alt"></i></a>
+             </div>
+            </div>
+
           </div>
           <div class="text-left">
-              <button mat-button class="next" >add another roomie</button>
+            <a (click)="addItem()"><i class="fas fa-plus-circle add">   Add Roomie</i>
+            
+             </a>
           </div>
           <div class="text-right">
 
-            <button mat-button matStepperPrevious class="back" >Back</button>
+            <button mat-button matStepperPrevious class="back">Back</button>
             &nbsp;
-            <button mat-button matStepperNext class="next"> <mat-icon>exit_to_app</mat-icon></button>
+            <button mat-button class="next" type="submit"> <mat-icon>exit_to_app</mat-icon></button>
           </div>
+         
         </form>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>create</ng-template>
         <div class="form-group example-container">
-                <mat-checkbox >accept terms and condition</mat-checkbox>
-          </div>
+          <mat-checkbox>accept terms and condition</mat-checkbox>
+        </div>
         <div class="text-center">
-          <button mat-button class="next">submit</button> &nbsp;
+          <button mat-button (click)="roomieDetails()">submit</button> &nbsp;
           <button mat-button (click)="stepper.reset()" class="back">Reset</button>
         </div>
       </mat-step>

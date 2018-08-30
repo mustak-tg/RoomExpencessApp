@@ -27,11 +27,11 @@ export class NavbarComponent implements OnInit {
       }			
     });
   
-    $(document).on('keyup', function(event) {
+    /* $(document).on('keyup', function(event) {
       if (event.which == 27 && $('.navbar-bootsnipp .bootsnipp-search').hasClass('open')) {
         $('a[href="#toggle-search"]').trigger('click');
       }
-    });
+    }); */
       
   });
 
